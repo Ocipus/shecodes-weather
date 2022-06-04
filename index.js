@@ -1,4 +1,4 @@
-import "./style.css";
+import "style.css";
 let now = new Date();
 let hours = now.getHours();
 let minutes = now.getMinutes();
