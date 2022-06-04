@@ -1,0 +1,63 @@
+body {
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+  font-family: "Barlow", sans-serif;
+}
+
+.card-all {
+  margin-top: 30px;
+  border-radius: 13px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+.card-search-bar {
+  padding: 40px 0 40px 0;
+  margin-left: 20px;
+  line-height: 30px;
+}
+.search-button {
+  border-radius: 5px;
+  background-color: #173f7f;
+  transition: 200ms ease-in-out;
+}
+.search-button:hover {
+  background-color: #91b1e5;
+}
+.location-button {
+  border-radius: 5px;
+  background-color: #173f7f;
+  color: #fff;
+  transition: 200ms ease-in-out;
+}
+.location-button:hover {
+  background-color: #91b1e5;
+  cursor: pointer;
+}
+h1 {
+  font-size: 30px;
+  margin-left: 20px;
+}
+h2 {
+  position: relative;
+  top: -75px;
+  right: -200px;
+}
+.units {
+  font-size: 15px;
+  position: relative;
+  top: -10px;
+}
+.extra-details {
+  list-style: none;
+  display: block;
+  font-size: 18px;
+}
+.card-weekly-weather {
+  font-size: 20px;
+  text-align: center;
+  margin-top: -30px;
+}
+.card-weekly-temperature {
+  color: rgb(70, 36, 133);
+  font-size: 18px;
+}
