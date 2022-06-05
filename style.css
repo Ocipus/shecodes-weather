@@ -61,3 +61,8 @@ h2 {
   color: rgb(70, 36, 133);
   font-size: 18px;
 }
+.coder {
+  font-size: 10px;
+  color: #5e6164;
+  font-family: "Barlow", sans-serif;
+}
