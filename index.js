@@ -79,3 +79,9 @@ searchForm.addEventListener("submit", handleSubmit);
 
 let currentLocationButton = document.querySelector("#location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+let apiKey = "37c9014ec42aa6b4e9bea13d45c47a71";
+let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
+let apiUrl = `${apiEndpoint}?q=${city}&appid=${apiKey}&units=metric`;
+
+axios.get(apiUrl).then(displayWeather);
