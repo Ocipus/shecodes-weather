@@ -32,8 +32,6 @@ function search(event) {
     let city = document.querySelector("#city");
     city.innerHTML = cityInput.value;
   }
-  let form = document.querySelector("#search-form");
-  form.addEventListener("submit", search);
   
   function fahrenheitUnit(event) {
     event.preventDefault();
