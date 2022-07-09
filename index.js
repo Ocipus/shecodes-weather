@@ -17,6 +17,7 @@ let day = days[now.getDay()];
 let dateTime = document.querySelector("#date-time");
 dateTime.innerHTML = `${day} ${hours}:${minutes}`;
 
+<<<<<<< HEAD
 function search(event) {
     event.preventDefault();
     let cityInput = document.querySelector("#city-input");
@@ -32,8 +33,6 @@ function search(event) {
     let city = document.querySelector("#city");
     city.innerHTML = cityInput.value;
   }
-  let form = document.querySelector("#search-form");
-  form.addEventListener("submit", search);
   
   function fahrenheitUnit(event) {
     event.preventDefault();
@@ -98,3 +97,15 @@ function search(event) {
   axios.get(apiUrl).then(displayWeather);
 
 
+=======
+function displayTemperature(response) {
+    
+  let temperatureMin = document.querySelector("#temp-min");
+  temperatureMin.innerHTML = response.data.main.temp_min;
+  let temperatureMax = document.queryCommandValue("#temp-max")
+  temperatureMax.innerHTML = response.data.main.temp_max;
+}
+  let apiKey = "65869b8a8fcb3e6e3a40de70fc6535b7";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+>>>>>>> parent of 09ef7d2 (update js as before)
