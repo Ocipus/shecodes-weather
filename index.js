@@ -46,6 +46,9 @@ function displayWeather(response) {
   document.querySelector("#temp-max").innerHTML = `${Math.round(
     response.data.main.temp
   )}°`;
+  document.querySelector("#temp-min").innerHTML = `${Math.round(
+    response.data.main.temp_min
+  )}°`;
 }
 
 function searchCity(city) {
