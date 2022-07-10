@@ -39,14 +39,7 @@ let tempMax = document.querySelector("#temp-max")
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
-  dateElement.innerHTML = formatDate(response.data.dt * 1000);
-  iconElement.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
-  iconElement.setAttribute("alt", response.data.weather[0].description);
-}
-
+  
 function search(city) {
   let apiKey = "37c9014ec42aa6b4e9bea13d45c47a71";
   let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
