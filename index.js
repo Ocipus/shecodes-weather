@@ -1,45 +1,29 @@
-function formatDate(timestamp) {
-  let date = new Date(timestamp);
-  let hours = date.getHours();
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
-  let minutes = date.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
-  let days = [
-    "Sunday",
-    " Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-  let day = days[date.getDay()];
-  return `${day} ${hours}:${minutes}`;
+let now = new Date();
+let hours = now.getHours();
+let minutes = now.getMinutes();
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+let day = days[now.getDay()];
+
+let dateTime = document.querySelector("#date-time");
+dateTime.innerHTML = `${day} ${hours}:${minutes}`;
+
+function searchCity(event) {
+  event.preventDefault();
+  let cityInput = document.querySelector("#city-input");
+  let city = document.querySelector("#city");
+  city.innerHTML = cityInput.value;
 }
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", searchCity);
 
-function displayTemperature(response) {
-  let tempMin = document.querySelector("#temp-min");
-let tempMax = document.querySelector("#temp-max")
-  let cityElement = document.querySelector("#city");
-  let descriptionElement = document.querySelector("#weather-description");
-  let humidityElement = document.querySelector("#humidity");
-  let windElement = document.querySelector("#wind");
-  let dateElement = document.querySelector("#date-time");
-  let iconElement = document.querySelector("#icon");
-
-  celsiusTemp = response.data.main.temp;
-
-  tempMin.innerHTML = Math.round(celsiusTemp);
-  tempMax.innerHTML = Math.round(celsiusTemp);
-  cityElement.innerHTML = response.data.name;
-  descriptionElement.innerHTML = response.data.weather[0].description;
-  humidityElement.innerHTML = response.data.main.humidity;
-  windElement.innerHTML = Math.round(response.data.wind.speed);
-  
 function search(city) {
   let apiKey = "37c9014ec42aa6b4e9bea13d45c47a71";
   let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
@@ -53,6 +37,27 @@ function handleSubmit(event) {
   search(cityElement.value);
   }
 
+  let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+function displayTemperature(response) {
+  let tempMin = document.querySelector("#temp-min");
+let tempMax = document.querySelector("#temp-max")
+  let descriptionElement = document.querySelector("#weather-description");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+  let dateElement = document.querySelector("#date-time");
+  let iconElement = document.querySelector("#icon");
+
+  celsiusTemp = response.data.main.temp;
+
+  tempMin.innerHTML = Math.round(celsiusTemp);
+  tempMax.innerHTML = Math.round(celsiusTemp);
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  
+
 function fahrenheitTemp(event) {
   event.preventDefault();
   let tempMin = document.querySelector("#temp-min");
@@ -64,7 +69,7 @@ function fahrenheitTemp(event) {
   tempMax.innerHTML = Math.round(fahrenheitTemp);
 }
 
-function celsiusTemperature(event) {
+function celsiusTemp(event) {
   event.preventDefault();
   celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
@@ -76,11 +81,9 @@ function celsiusTemperature(event) {
 
 let celsiusTemp = null;
 
-let form = document.querySelector("#search-form");
-form.addEventListener("submit", handleSubmit);
-
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", fahrenheitTemp);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", celsiusTemperature);
+}
