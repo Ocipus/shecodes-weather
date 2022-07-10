@@ -18,6 +18,7 @@ let dateTime = document.querySelector("#date-time");
 dateTime.innerHTML = `${day} ${hours}:${minutes}`;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 function search(event) {
     event.preventDefault();
     let cityInput = document.querySelector("#city-input");
@@ -100,6 +101,8 @@ function search(event) {
 
 
 =======
+=======
+>>>>>>> parent of 09ef7d2 (update js as before)
 function displayTemperature(response) {
     
   let temperatureMin = document.querySelector("#temp-min");
@@ -109,5 +112,9 @@ function displayTemperature(response) {
 }
   let apiKey = "65869b8a8fcb3e6e3a40de70fc6535b7";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}&units=metric`;
+<<<<<<< HEAD
+  axios.get(apiUrl).then(displayTemperature);
+>>>>>>> parent of 09ef7d2 (update js as before)
+=======
   axios.get(apiUrl).then(displayTemperature);
 >>>>>>> parent of 09ef7d2 (update js as before)
