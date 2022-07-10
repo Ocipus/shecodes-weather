@@ -51,7 +51,7 @@ function handleSubmit(event) {
   event.preventDefault();
   let cityElement = document.querySelector("#city");
   search(cityElement.value);
-}
+  }
 
 function fahrenheitTemp(event) {
   event.preventDefault();
@@ -84,5 +84,3 @@ fahrenheitLink.addEventListener("click", fahrenheitTemp);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", celsiusTemperature);
-
-search("Firenze");
