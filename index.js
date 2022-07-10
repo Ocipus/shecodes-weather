@@ -49,8 +49,9 @@ let tempMax = document.querySelector("#temp-max")
 
 function search(city) {
   let apiKey = "37c9014ec42aa6b4e9bea13d45c47a71";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayTemperature);
+  let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
+  let apiUrl = `${apiEndpoint}?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayWeather);
 }
 
 function handleSubmit(event) {
@@ -92,4 +93,3 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", celsiusTemperature);
 
 search("Firenze");
-displayForecast();
