@@ -41,14 +41,29 @@ function celsiusUnit(event) {
 let celsius = document.querySelector("#celsius-link");
 celsius.addEventListener("click", celsiusUnit);
 
+
+
+
+
+
 function displayWeather(response) {
-  document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#temp-max").innerHTML = `${Math.round(
-    response.data.main.temp
-  )}°`;
-  document.querySelector("#temp-min").innerHTML = `${Math.round(
-    response.data.main.temp_min
-  )}°`;
+  let tempMax = document.querySelector("#temp-max");
+  let tempMin = document.querySelector("#temp-min")
+  let cityElement = document.querySelector("#city");
+  let descriptionElement = document.querySelector("#weather-description");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+
+  tempMax.innerHTML = response.data.main.temp_max;
+  tempMin.innerHTML = response.data.main.temp_min;
+  cityElement.innerHTML = response.data.name;
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+
+
+
+
 }
 
 function searchCity(city) {
