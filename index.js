@@ -63,8 +63,10 @@ function displayWeather(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   
   let windElement = document.querySelector("#wind");
-
   windElement.innerHTML = Math.round(response.data.wind.speed);
+
+  let iconElement = document.querySelector("#icon");
+  iconElement.innerHTML = "http://openweathermap.org/img/wn/10d@2x.png"
 
 }
 
