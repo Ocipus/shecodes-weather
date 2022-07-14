@@ -58,9 +58,6 @@ function displayWeather(response) {
   let windElement = document.querySelector("#wind");
 }
 
-
-  celsiusTemperature = response.data.main.temp;
-
   tempMax.innerHTML = response.data.main.temp_max;
   tempMin.innerHTML = response.data.main.temp_min;
   cityElement.innerHTML = response.data.name;
