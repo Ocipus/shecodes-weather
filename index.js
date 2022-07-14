@@ -50,11 +50,8 @@ celsius.addEventListener("click", celsiusUnit);
 
 
 function displayWeather(response) {
-  let tempMax = document.querySelector("#temp-max");
-  tempMax.innerHTML = response.data.main.temp_max;
-
-  let tempMin = document.querySelector("#temp-min");
-  tempMin.innerHTML = response.data.main.temp_min;
+  let temperatureToday = document.querySelector("#temperature-today");
+  temperatureToday.innerHTML = response.data.main.temp;
 
   let cityElement = document.querySelector("#city");
   cityElement.innerHTML = response.data.name;
