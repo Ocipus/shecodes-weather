@@ -66,7 +66,7 @@ function displayWeather(response) {
   windElement.innerHTML = Math.round(response.data.wind.speed);
 
   let iconElement = document.querySelector("#icon");
-  iconElement.innerHTML = "http://openweathermap.org/img/wn/10d@2x.png"
+  iconElement.innerHTML = `http://openweathermap.org/img/wn/10d@2x.png`;
 
 }
 
