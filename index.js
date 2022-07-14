@@ -51,7 +51,7 @@ celsius.addEventListener("click", celsiusUnit);
 
 function displayWeather(response) {
   let temperatureToday = document.querySelector("#temperature-today");
-  temperatureToday.innerHTML = response.data.main.temp;
+  temperatureToday.innerHTML = Math.round(response.data.main.temp);
 
   let cityElement = document.querySelector("#city");
   cityElement.innerHTML = response.data.name;
