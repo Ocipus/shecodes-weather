@@ -56,7 +56,8 @@ function displayWeather(response) {
   let descriptionElement = document.querySelector("#weather-description");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
- 
+}
+
 
   celsiusTemperature = response.data.main.temp;
 
@@ -68,7 +69,6 @@ function displayWeather(response) {
   windElement.innerHTML = Math.round(response.data.wind.speed);
 
 
-}
 
 
 
