@@ -56,8 +56,8 @@ function displayWeather(response) {
   let descriptionElement = document.querySelector("#weather-description");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
-}
 
+  
   tempMax.innerHTML = response.data.main.temp_max;
   tempMin.innerHTML = response.data.main.temp_min;
   cityElement.innerHTML = response.data.name;
@@ -66,7 +66,7 @@ function displayWeather(response) {
   windElement.innerHTML = Math.round(response.data.wind.speed);
 
 
-
+}
 
 
 function searchCity(city) {
