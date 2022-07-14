@@ -50,6 +50,7 @@ celsius.addEventListener("click", celsiusUnit);
 
 
 function displayWeather(response) {
+  console.log(response.data);
   let temperatureToday = document.querySelector("#temperature-today");
   temperatureToday.innerHTML = Math.round(response.data.main.temp);
 
@@ -106,3 +107,5 @@ searchForm.addEventListener("submit", handleSubmit);
 
 let currentLocationButton = document.querySelector("#location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+search("Lisbon");
