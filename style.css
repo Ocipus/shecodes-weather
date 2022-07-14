@@ -37,7 +37,11 @@ h1 {
   font-size: 30px;
   margin-left: 20px;
 }
-
+h2 {
+  position: relative;
+  top: -75px;
+  right: -200px;
+}
 .units {
   font-size: 15px;
   position: relative;
@@ -51,7 +55,7 @@ h1 {
 .card-weekly-weather {
   font-size: 20px;
   text-align: center;
-  margin-top: -35px;
+  margin-top: -50px;
 }
 .card-weekly-temperature {
   color: rgb(70, 36, 133);
