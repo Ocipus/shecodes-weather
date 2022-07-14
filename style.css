@@ -30,7 +30,7 @@ body {
   transition: 200ms ease-in-out;
 }
 .location-button:hover {
-  background-color: #91b1e5;
+  background-color: #6f9be1;
   cursor: pointer;
 }
 h1 {
@@ -55,7 +55,7 @@ h2 {
 .card-weekly-weather {
   font-size: 20px;
   text-align: center;
-  margin-top: -30px;
+  margin-top: -50px;
 }
 .card-weekly-temperature {
   color: rgb(70, 36, 133);
