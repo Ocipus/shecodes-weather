@@ -21,7 +21,7 @@ body {
   transition: 200ms ease-in-out;
 }
 .search-button:hover {
-  background-color: #6f9be1;
+  background-color: #8ec5fc;
 }
 .location-button {
   border-radius: 5px;
@@ -30,7 +30,7 @@ body {
   transition: 200ms ease-in-out;
 }
 .location-button:hover {
-  background-color: #6f9be1;
+  background-color: #8ec5fc;
   cursor: pointer;
 }
 h1 {
