@@ -8,7 +8,7 @@ body {
 .card-all {
   margin-top: 30px;
   border-radius: 13px;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
 }
 .card-search-bar {
   padding: 40px 0 40px 0;
@@ -21,7 +21,7 @@ body {
   transition: 200ms ease-in-out;
 }
 .search-button:hover {
-  background-color: #deb7d5;
+  background-color: #6f9be1;
 }
 .location-button {
   border-radius: 5px;
