@@ -21,8 +21,8 @@ let day = days[now.getDay()];
 function displayforecast() {
   let forecastElement = document.querySelector("#forecast");
 
-  forecastElement = `<div class="row">`;
-  forecast HTML = forecastHRML +
+  let forecastHTML = `<div class="row">`;
+  forecastHTML = forecastHTML +
   `
         <div class="col-2">
       <div class="weather-forecast-date" id="">Seg</div>
