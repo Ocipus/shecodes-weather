@@ -34,7 +34,6 @@ function displayforecast() {
         </div>
       </div>
       `;
-}
 });
 let dateTime = document.querySelector("#date-time");
 dateTime.innerHTML = `${day} ${hours}:${minutes}`;
