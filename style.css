@@ -56,11 +56,11 @@ h2 {
   font-size: 20px;
   text-align: center;
   margin-top: -50px;
-  margin-left: 20px;
+  margin-bottom: 20px;
 }
 .weather-forecast-date {
   color: rgb(70, 36, 133);
-  font-size: 18px;
+  font-size: 16px;
 }
 .coder {
   font-size: 15px;
