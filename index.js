@@ -21,7 +21,17 @@ let day = days[now.getDay()];
 function displayforecast() {
   let forecastElement = document.querySelector("#forecast");
 
-  forecastElement.innerHTML = "Forecast";
+  forecastElement = `<div class="row">`;
+  forecast HTML = forecastHRML +
+  `
+        <div class="col-2">
+      <div class="weather-forecast-date" id="">Seg</div>
+        <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="" width="36">
+        <div class="weather-forecast-temp-min">
+          10° | <strong class="weather-forecast-temp-min"> 20°</strong>
+        </div>
+      </div>
+      `;
 }
 
 let dateTime = document.querySelector("#date-time");
