@@ -35,6 +35,13 @@ function displayforecast() {
       </div>
       `;
 });
+
+forecastHTML = forecastHTML + `</div>`;
+forecastElement.innerHTML = forecastHTML;
+console.log(forecastHTML);
+}
+
+
 let dateTime = document.querySelector("#date-time");
 dateTime.innerHTML = `${day} ${hours}:${minutes}`;
 
