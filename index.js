@@ -18,6 +18,12 @@ let days = [
 ];
 let day = days[now.getDay()];
 
+function displayforecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  forecastElement.innerHTML = "Forecast";
+}
+
 let dateTime = document.querySelector("#date-time");
 dateTime.innerHTML = `${day} ${hours}:${minutes}`;
 
@@ -109,3 +115,4 @@ let currentLocationButton = document.querySelector("#location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 searchCity("Lisbon");
+displayforecast();
