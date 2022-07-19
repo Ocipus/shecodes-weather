@@ -7,6 +7,7 @@ body {
 
 .card-all {
   margin-top: 30px;
+  margin-bottom: 30px;
   border-radius: 13px;
   background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
 }
