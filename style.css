@@ -3,11 +3,11 @@ body {
   display: block;
   margin: 0 auto;
   font-family: "Barlow", sans-serif;
+
 }
 
 .card-all {
   margin-top: 30px;
-  margin-bottom: 30px;
   border-radius: 13px;
   background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
 }
@@ -59,6 +59,8 @@ h2 {
   text-align: center;
   margin-top: -50px;
   margin-bottom: 20px;
+  border-left: 20px;
+  border-bottom: 20px;
 }
 .weather-forecast-date {
   color: rgb(70, 36, 133);
