@@ -18,6 +18,13 @@ let days = [
 ];
 let day = days[now.getDay()];
 
+function formatDay(timestamp) {
+let date = new Date(timestamp * 1000);
+let day = date.getDay();
+
+return day;
+}
+
 function displayforecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
