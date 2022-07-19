@@ -46,6 +46,7 @@ function getForecast(coordinates) {
   let apiKey = "4c6a74c9f26ff78c5de94670ce705051";
   let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
 console.log(apiUrl);
+axios.get(apiUrl).then(displayforecast);
 
 }
 
@@ -142,4 +143,3 @@ let currentLocationButton = document.querySelector("#location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 searchCity("Lisbon");
-displayforecast();
