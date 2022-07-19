@@ -41,6 +41,12 @@ forecastElement.innerHTML = forecastHTML;
 console.log(forecastHTML);
 }
 
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+console.log(apiUrl);
+let apiKey = "37c9014ec42aa6b4e9bea13d45c47a71";
+}
 
 let dateTime = document.querySelector("#date-time");
 dateTime.innerHTML = `${day} ${hours}:${minutes}`;
@@ -71,11 +77,7 @@ function celsiusUnit(event) {
 let celsius = document.querySelector("#celsius-link");
 celsius.addEventListener("click", celsiusUnit);
 
-function getForecast(coordinates) {
-  console.log(coordinates);
-  let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-console.log(apiUrl);
-}
+
 
 function displayWeather(response) {
   console.log(response.data);
