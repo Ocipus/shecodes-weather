@@ -19,19 +19,18 @@ let days = [
 let day = days[now.getDay()];
 
 function displayforecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
-  let days = ["Thu", "Fri", "Sat", "Sun"];
-  days.forEach(function (day) {
+  
+  forecast.forEach(function (forecastDay) {
   forecastHTML = forecastHTML +
   `
         <div class="col-2">
-      <div class="weather-forecast-date" id="">Seg</div>
-        <img src="https://openweathermap.org/img/wn/50d@2x.png" alt="" width="36">
-        <div class="weather-forecast-temp-min">
-          10° | <strong class="weather-forecast-temp-min"> 20°</strong>
+      <div class="weather-forecast-date" id="">${forecastDay.dt}</div>
+        <img src="https://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt="" width="40">
+        <div class="weather-forecast-temp-min"> ${forecastDay.temp.max}°<strong class="weather-forecast-temp-min"> ${forecastDay.temp.min}°</strong>
         </div>
       </div>
       `;

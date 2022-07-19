@@ -62,14 +62,12 @@ h2 {
   border-left: 20px;
   border-bottom: 20px;
 }
-.temperature-today {
-  border-left: 35px;
-}
+
 .weather-forecast-date {
   color: rgb(70, 36, 133);
   font-size: 16px;
   border-left: 20px;
-  border-bottom: 20px;
+  border-bottom: 5px;
 }
 .coder {
   font-size: 15px;
