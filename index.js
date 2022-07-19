@@ -18,7 +18,8 @@ let days = [
 ];
 let day = days[now.getDay()];
 
-function displayforecast() {
+function displayforecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
