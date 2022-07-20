@@ -18,7 +18,7 @@ let days = [
 ];
 let day = days[now.getDay()];
 
-unction formatDate(timestamp) {
+function formatDate(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
   if (hours < 10) {
