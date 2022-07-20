@@ -65,6 +65,8 @@ axios.get(apiUrl).then(displayforecast);
 
 }
 
+let day = date.getDay();
+
 let dateTime = document.querySelector("#date-time");
 dateTime.innerHTML = `${day} ${hours}:${minutes}`;
 
