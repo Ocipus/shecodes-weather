@@ -88,8 +88,6 @@ function displayWeather(response) {
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = Math.round(response.data.wind.speed);
 
-  
-  let dateElement = document.querySelector("#date");
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
 
   let iconElement = document.querySelector("#icon");
