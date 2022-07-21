@@ -95,7 +95,7 @@ axios.get(apiUrl).then(displayforecast);
 }
 
 let dateTime = document.querySelector("#date-time");
-dateTime.innerHTML = `${day} ${hours}:${minutes}`;
+dateTime.innerHTML = formatDate(new Date());
 
 function search(event) {
   event.preventDefault();
