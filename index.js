@@ -1,22 +1,27 @@
-let now = new Date();
-let hours = now.getHours();
-if(hours < 10) {
-  hours = `0${hours}`;
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  return `${day} ${hours}:${minutes}`;
 }
-let minutes = now.getMinutes();
-if (minutes < 10) {
-  minutes = `0${minutes}`;
-}
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday"
-];
-let day = days[now.getDay()];
+
 
 function formatDay(timestamp) {
 let date = new Date(timestamp * 1000);
@@ -31,16 +36,18 @@ function displayforecast(response) {
 
   let forecastHTML = `<div class="row">`;
   
-  forecast.forEach(function (forecastDay) {
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
   forecastHTML = forecastHTML +
   `
         <div class="col-2">
-      <div class="weather-forecast-date" id="">${formatDay(forecastDay.dt)}</div>
+      <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
         <img src="https://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt="" width="40">
         <div class="weather-forecast-temp-min"> ${forecastDay.temp.max}°<strong class="weather-forecast-temp-min"> ${forecastDay.temp.min}°</strong>
         </div>
       </div>
       `;
+  }
 });
 
 forecastHTML = forecastHTML + `</div>`;
