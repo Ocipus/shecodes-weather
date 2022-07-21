@@ -55,7 +55,7 @@ h2 {
   font-size: 16px;
 }
 .weekly-forecast {
-  font-size: 16px;
+  font-size: 18px;
   text-align: center;
   margin-top: -50px;
   padding-bottom: 20px;
@@ -63,7 +63,7 @@ h2 {
 
 .weather-forecast-date {
   color: rgb(70, 36, 133);
-  font-size: 16px;
+  font-size: 18px;
   border-left: 20px;
  ;
 
