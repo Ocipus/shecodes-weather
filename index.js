@@ -98,14 +98,14 @@ function displayWeather(response) {
 
   let descriptionElement = document.querySelector("#weather-description");
   descriptionElement.innerHTML = response.data.weather[0].description;
-  
+
   let humidityElement = document.querySelector("#humidity");
   humidityElement.innerHTML = response.data.main.humidity;
-  
+
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = Math.round(response.data.wind.speed);
 
-  let dateElement = document.querySelector("#date");
+  let dateElement = document.querySelector("#date-time");
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
 
   let iconElement = document.querySelector("#icon");
@@ -114,9 +114,8 @@ function displayWeather(response) {
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].decription);
-  
-getForecast(response.data.coord);
 
+  getForecast(response.data.coord);
 }
 
 
